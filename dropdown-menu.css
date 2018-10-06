@@ -1,0 +1,112 @@
+
+/*=======================================
+  MENU SECTION ANIMATION
+  =======================================*/
+.menu {
+	color: #f00;
+	font: bold 12px/18px sans-serif;
+	text-align: center;
+	display: inline;
+	margin: 0% auto;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.menu li {
+	color: #000;
+	background-color: rgba(255, 255, 255, 1);
+	display: inline-block;
+	margin: 0% auto;
+	position: relative;
+	padding: 15px 4%;
+	border: 1px solid #9D9FA2;
+	box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.5);
+	border-radius: 6px;
+	/* rounding the edges */
+	cursor: pointer;
+	transition-property: background;
+	transition-duration: .4s;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+	/* margin-right:-2px; get rid of the spacing between
+    menu items*/
+}
+
+.menu li:hover {
+	color: #f00;
+	background-color: rgba(100,65,0,.3);
+}
+
+.dropdown{
+    position: block;
+    display: inline-block;
+    position: relative; /* (+ width: 100%;)
+    to make drop down menu the same width
+    as the parent button's width.
+    General concept: 
+    you should set the child elements (.dropdown)
+     to width:100%, and your parent elements (.top_level)
+      should have position:relative; set. This means
+       that the positioning of the children will
+        be done relative to the parents , and then 
+        their width will be set to 
+        be the same as the parents' width.*/
+    border-color:black;
+}
+.dropdown-content {
+    cursor: pointer;
+    display:none;
+    position: absolute;
+    background-color: rgba(14, 36, 54, 0.726);
+    width: 90.3%; /*column width*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    text-size-adjust: auto;
+    padding:2px 2px;
+    margin: 0px;
+}
+.dropdown-content a {
+    color: rgb(201, 166, 166);
+    text-decoration: antiquewhite;
+    text-anchor: middle;
+    padding: 3px 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* hover over the HOME button
+.dropbtn li:hover{
+    border-color:#bfb8b7;
+    background-color:#bfb8b7;
+    color: black;
+   
+} */
+
+/*content hover
+.dropdown-content:hover {
+    background-color: rgb(219, 194, 170);
+ 
+  } /* hover over individual cell;
+ (.dropdown-content:hover a)target the
+ whole thing*/
+.dropdown-content:hover{
+    color:black;
+    transition-property: background;
+	transition-duration: .2s;
+	transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+    background-color: rgba(100,65,0,.3);
+    border: 1px solid black;
+}
+.dropbtn:hover{
+    border:2px solid black;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */    
+    flex: 1;;
+}
